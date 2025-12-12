@@ -1,0 +1,34 @@
+{
+    "requirements": [
+    {
+    "id": "req-1",
+    "title": "Cardiology abnormal ECG alert",
+    "requestor": "Dr. Patel (Cardiology)",
+    "summary": "Create an alert when an ECG result shows ST-elevation to notify on-call cardiologist.",
+    "notes": "No details on cadence, thresholds, or who receives the alert."
+    },
+    {
+    "id": "req-2",
+    "title": "Outpatient appointment reminders",
+    "requestor": "Clinic Admin",
+    "summary": "Add SMS reminders 48 hours before appointment for patients with cell phone on file.",
+    "notes": "Not clear whether opt-in required and if translation needed."
+    }
+    ],
+    "support": [
+    {
+    "id": "sup-1",
+    "title": "User cannot log in to Hyperspace",
+    "symptoms": "User reports invalid credentials after password reset",
+    "steps": ["Check AD account status","Verify group membership","Confirm password sync to Epic"],
+    "logs": "Auth fail: password_mismatch"
+    },
+    {
+    "id": "sup-2",
+    "title": "Interface ACK backlog",
+    "symptoms": "HL7 interface queue has backup for lab results",
+    "steps": ["Check interface engine","Restart interface channel","Review last ACK failures"],
+    "logs": "NACK: missing patient identifier"
+    }
+    ]
+    }
