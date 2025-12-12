@@ -203,12 +203,12 @@
       flex-basis: 100%;
       margin-bottom: 0.5rem;
     }
+  
     .app-icon {
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
-        vertical-align: middle;
-      }
-      
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
   }
   
