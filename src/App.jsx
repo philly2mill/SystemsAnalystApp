@@ -6,8 +6,6 @@ import ProjectManager from './components/ProjectManager.jsx';
 import RequirementsSim from './components/RequirementsSim.jsx';
 import SupportTriage from './components/SupportTriage.jsx';
 
-import SAicon from './SAicon.png';
-
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -16,7 +14,8 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <img src={SAicon} alt="Systems Analyst Icon" className="app-icon" />
+        {/* Use the public folder path for the icon */}
+        <img src="/SAicon.png" alt="Systems Analyst Icon" className="app-icon" />
         <h1>Systems Analyst Simulator</h1>
 
         <button 
@@ -48,16 +47,17 @@ export default function App() {
           <Route path="/docs" element={<DocumentationLab />} />
         </Routes>
 
-        {/* Music playlist area */}
+        {/* Study Playlist */}
         <section className="music-player">
           <h2>Study Playlist</h2>
           <p>Add your favorite study tunes below:</p>
-          <audio controls>
+          <audio controls preload="auto">
             <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
-          <audio controls>
+          <audio controls preload="auto">
             <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
           </audio>
         </section>
       </main>
@@ -68,3 +68,4 @@ export default function App() {
     </div>
   );
 }
+

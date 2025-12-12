@@ -2,9 +2,8 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
-export default defineConfig({
-  base: "/SystemsAnalystApp/",
-
+export default defineConfig(({ command }) => ({
+  base: command === "serve" ? "/" : "/systems-analyst-sim/",
   plugins: [
     react(),
     VitePWA({
@@ -19,10 +18,10 @@ export default defineConfig({
             src: "SAicon.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "any maskable"
-          }
-        ]
-      }
-    })
-  ]
-});
+            purpose: "any maskable",
+          },
+        ],
+      },
+    }),
+  ],
+}));
